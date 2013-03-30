@@ -24,11 +24,6 @@ public class MakeFolders
 	
 	private static String getDateTimeStamp()
 	{
-		/*
-			This method was constructed after searching for simple custom date/time formatting.
-			Its only downside is that the Date class is deprecated, and may become unavailable
-			in the future. I am in the process of working on a better alternative.
-		*/
 		SimpleDateFormat dateFormat = new SimpleDateFormat("MM.dd.yyyy hh:mm:ss a z");
 		return dateFormat.format(new Date());
 	}
