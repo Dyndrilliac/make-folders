@@ -1,10 +1,10 @@
-*******************************************
-Title:  MakeFolders
+*******************************************************************
 
-Author: [Matthew Boyette](mailto:Dyndrilliac@gmail.com)
+* Title:  MakeFolders
+* Author: [Matthew Boyette](mailto:Dyndrilliac@gmail.com)
+* Date:   11/12/2012
 
-Date:   11/12/2012
-*******************************************
+*******************************************************************
 
 Simple program to take a text file with folder names on each line and generate the folders.
 
