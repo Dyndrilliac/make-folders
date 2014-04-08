@@ -18,8 +18,12 @@ public class MakeFolders
 		new MakeFolders(args);
 	}
 	
+	private boolean isDebugging = false;
+	
 	public MakeFolders(final String[] args)
 	{
+		this.setDebugging(Support.promptDebugMode(null));
+		
 		if (args.length > 0)
 		{
 			for (String arg: args)
@@ -31,6 +35,11 @@ public class MakeFolders
 		{
 			this.readFile("");
 		}
+	}
+	
+	public final boolean isDebugging()
+	{
+		return this.isDebugging;
 	}
 	
 	protected final void makeFolder(final String folderName)
@@ -45,7 +54,7 @@ public class MakeFolders
 		
 		if ((newFilePath == null) || newFilePath.isEmpty())
 		{
-			newFilePath = Support.getFilePath(null, true, false);
+			newFilePath = Support.getFilePath(null, true, this.isDebugging());
 		}
 		
 		if ((newFilePath == null) || newFilePath.isEmpty())
@@ -82,5 +91,10 @@ public class MakeFolders
 				inputStream = null;
 			}
 		}
+	}
+	
+	public final void setDebugging(final boolean isDebugging)
+	{
+		this.isDebugging = isDebugging;
 	}
 }
